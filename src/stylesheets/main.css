@@ -85,12 +85,19 @@ html, body {
   font-family: "Roboto", sans-serif;
   color: #FFF;
   font-weight: 100;
-  font-size: 1.15rem; }
+  font-size: 1.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%; }
 
 .audio-player .track .artist-name {
   color: #FFF;
   font-weight: 700;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%; }
 
 .audio-player .track .track-time {
   font-family: "Roboto", sans-serif;
@@ -152,10 +159,13 @@ html, body {
   font-size: 3rem;
   color: #FFF; }
 
+.audio-player .play-button.is-playing {
+  padding-left: 0.1rem; }
+
 .audio-player .play-button:hover {
   background-color: #FFF;
   color: #F6A623;
-  transition: 0.2s ease-in;
+  transition: background-color color 0.2s ease-in;
   cursor: pointer; }
 
 .audio-player .next-item-button {

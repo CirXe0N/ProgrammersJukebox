@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
 
+let classNames = require('classnames');
+
+
 export default class ButtonPlay extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            playing: false
+            isPlaying: this.props.isPlaying
         };
     }
 
     handleClick() {
-        if (!this.state.playing) {
-            this.props.player.play();
+        this.setState({isPlaying: !this.state.isPlaying});
+
+        if (!this.state.isPlaying) {
+            this.props.onPlay();
         } else {
-            this.props.player.pause();
+            this.props.onPause();
         }
     }
 
     render() {
-        let buttonIcon;
-        if (!this.state.playing) {
-            buttonIcon = <i className="fa fa-play fa-fw" aria-hidden="true"></i>;
-        } else {
-            buttonIcon = <i className="fa fa-pause fa-fw" aria-hidden="true"></i>;
-        }
-        return (<div onClick={()=>this.handleClick()} className="play-button"> {buttonIcon} </div>);
+        return (
+            <div onClick={()=>this.handleClick()} className={classNames("play-button", {"is-playing": this.state.isPlaying})}>
+                <i className={classNames("fa fa-fw", {"fa-pause": this.state.isPlaying, "fa-play": !this.state.isPlaying })} aria-hidden="true"></i>
+            </div>
+        );
     }
 }

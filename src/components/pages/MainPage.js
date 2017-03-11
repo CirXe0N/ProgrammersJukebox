@@ -7,11 +7,15 @@ import AudioPlayer from '../audio-player/AudioPlayer';
 import '../../../node_modules/foundation-sites/dist/css/foundation.min.css';
 import '../../../node_modules/font-awesome/css/font-awesome.css';
 import '../../stylesheets/main.css';
+import {SOUNDCLOUD_PLAYLIST} from "../../config";
 
-class App extends Component {
+
+export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {selectedTab: 'HOUSE'};
+    this.state = {
+        selectedTab: 'HOUSE'
+    };
   }
 
   handleTab(tabName) {
@@ -23,18 +27,16 @@ class App extends Component {
       <main>
         <SectionNavBar/>
         <div className="row columns">
-          <SectionTabs tabName={this.state.selectedTab} onSelectTab={this.handleTab.bind(this)} />
+          <SectionTabs tabName={this.state.selectedTab} onSelectTab={(tabName) => this.handleTab(tabName)} />
         </div>
         <div className="row columns">
           <ContentPage tabName={this.state.selectedTab}/>
         </div>
         <div className="row columns">
-          <AudioPlayer/>
+          <AudioPlayer playlistURL={SOUNDCLOUD_PLAYLIST[this.state.selectedTab]}/>
         </div>
         <SectionFooter/>
       </main>
     );
   }
 }
-
-export default App;

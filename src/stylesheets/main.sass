@@ -115,11 +115,19 @@ html, body
       color: $pj-white
       font-weight: 100
       font-size: 1.15rem
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      width: 90%
+
 
     .artist-name
       color: $pj-white
       font-weight: 700
       font-size: 0.9rem
+      overflow: hidden
+      text-overflow: ellipsis
+      width: 90%
 
     .track-time
       font-family: $font-roboto
@@ -181,10 +189,13 @@ html, body
     font-size: 3rem
     color: $pj-white
 
+    &.is-playing
+      padding-left: 0.1rem
+
     &:hover
       background-color: $pj-white
       color:  $pj-orange
-      transition: 0.2s ease-in
+      transition: background-color color 0.2s ease-in
       cursor: pointer
 
   .next-item-button
