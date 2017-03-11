@@ -1,0 +1,235 @@
+// IMPORTS
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,700,900')
+@import url('https://fonts.googleapis.com/css?family=Roboto:100')
+
+
+// FONTS
+
+$font-nunito: 'Nunito', sans-serif
+$font-roboto: 'Roboto', sans-serif
+
+
+// COLORS
+
+$pj-orange: #F6A623
+$pj-light-grey: #EFEFEF
+$pj-grey: #333333
+$pj-white: #FFF
+
+
+// GLOBAL STYLES
+
+html, body
+  background-color: $pj-light-grey
+  font-family: $font-nunito
+
+
+// TOP NAVIGATION BAR
+
+.top-bar, .top-bar ul, ul li
+  background-color: $pj-grey
+
+.top-bar
+  padding-top: 0.9rem
+  padding-bottom: 0.9rem
+
+  .site-title
+    font-size: 1.5rem
+    color: $pj-orange
+
+    span
+      color: $pj-white
+      font-weight: 700
+
+  .creator
+    padding-top: 0.75rem
+    font-size: 0.8rem
+    color: $pj-white
+    font-weight: 700
+    text-transform: uppercase
+
+    span
+      color: $pj-orange
+
+
+// TABS
+
+.tabs
+  margin-top: 3rem
+  text-align: center
+  border-collapse: collapse
+  font-weight: 900
+  font-size: 0.85rem
+
+  td
+    padding: 0.4rem 0
+    border: solid 1px $pj-grey
+    width: 16.67%
+
+    &.selected
+      background-color: $pj-orange
+      color: $pj-white
+
+    &:hover
+      background-color: $pj-orange
+      color: $pj-white
+      transition: 0.2s ease-in
+      cursor: pointer
+
+
+// CONTENT
+
+.page-title
+  font-size: 3.5rem
+  font-weight: 100
+  font-family: $font-roboto
+  text-align: center
+  margin: 4rem 0
+  text-transform: lowercase
+
+.audio-player
+  position: relative
+  width: 40rem
+  height: 15rem
+  background-color: $pj-grey
+  margin: 0 auto
+  box-shadow: 0 0 27px 2px rgba(0,0,0,0.75)
+
+  .media-object-section
+    padding: 0
+
+  .thumbnail
+    border: none
+
+    img
+      height: 15rem
+
+  .track
+    padding-top: 1rem
+    padding-left: 1rem
+    width: 25rem
+
+    .track-name
+      font-family: $font-roboto
+      color: $pj-white
+      font-weight: 100
+      font-size: 1.15rem
+
+    .artist-name
+      color: $pj-white
+      font-weight: 700
+      font-size: 0.9rem
+
+    .track-time
+      font-family: $font-roboto
+      color: $pj-white
+      font-weight: 100
+      font-size: 2rem
+      text-align: center
+      padding-top: 1rem
+      padding-bottom: 1rem
+
+      span:last-child
+        padding-left: 1rem
+
+      span:first-child
+        border-right: solid 2.5px $pj-white
+        padding-right: 0.5rem
+        margin-left: -1rem
+
+  .hr-line
+    margin-top: 2.6rem
+    height: 1px
+    background-color: $pj-light-grey
+
+  .controls
+    position: relative
+    width: 100%
+    text-align: center
+    margin-top: -2.5rem
+
+  .previous-item-button
+    position: relative
+    display: inline-block
+    border-radius: 100%
+    background-color: $pj-orange
+    top: -0.4rem
+    width: 4rem
+    height: 4rem
+    padding-top: 0.55rem
+    padding-right: 0.5rem
+    font-size: 2rem
+    color: $pj-white
+
+    &:hover
+      background-color: $pj-white
+      color:  $pj-orange
+      transition: 0.2s ease-in
+      cursor: pointer
+
+  .play-button
+    position: relative
+    display: inline-block
+    border-radius: 100%
+    background-color: $pj-orange
+    width: 5rem
+    height: 5rem
+    margin: 0 1rem
+    padding-top: 0.3rem
+    padding-left: 0.5rem
+    font-size: 3rem
+    color: $pj-white
+
+    &:hover
+      background-color: $pj-white
+      color:  $pj-orange
+      transition: 0.2s ease-in
+      cursor: pointer
+
+  .next-item-button
+    position: relative
+    display: inline-block
+    border-radius: 100%
+    background-color: $pj-orange
+    top: -0.4rem
+    width: 4rem
+    height: 4rem
+    padding-top: 0.55rem
+    padding-left: 0.5rem
+    font-size: 2rem
+    color: $pj-white
+
+    &:hover
+      background-color: $pj-white
+      color:  $pj-orange
+      transition: 0.2s ease-in
+      cursor: pointer
+
+
+// FOOTER
+
+.footer
+  position: fixed
+  bottom: 0
+  width: 100%
+  text-align: center
+  padding-top: 0.8rem
+  padding-bottom: 0.8rem
+  background-color: $pj-grey
+  font-size: 1.4rem
+
+  .footer-icon
+    display: inline-block
+    padding: 0 1rem
+    border-right: 2px solid $pj-white
+
+    &:last-child
+      border: none
+
+    a
+      color: $pj-white
+
+      &:hover
+        color: $pj-orange
+        transition: color 0.2s ease-in

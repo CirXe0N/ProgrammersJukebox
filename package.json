@@ -3,16 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "foundation-sites": "^6.3.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "soundcloud": "^3.1.2",
+    "soundmanager2": "^2.97.20150601-a"
   },
   "devDependencies": {
     "babel-preset-env": "^1.2.1",
+    "classnames": "^2.2.5",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
     "react-scripts": "0.9.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass src/stylesheets/ -o src/stylesheets/",
+    "watch-css": "npm run build-css && node-sass src/stylesheets/ -o src/stylesheets/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

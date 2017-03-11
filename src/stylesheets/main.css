@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+html, body {
+  background-color: #EFEFEF;
+  font-family: "Nunito", sans-serif; }
+
+.top-bar, .top-bar ul, ul li {
+  background-color: #333333; }
+
+.top-bar {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem; }
+
+.top-bar .site-title {
+  font-size: 1.5rem;
+  color: #F6A623; }
+
+.top-bar .site-title span {
+  color: #FFF;
+  font-weight: 700; }
+
+.top-bar .creator {
+  padding-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #FFF;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.top-bar .creator span {
+  color: #F6A623; }
+
+.tabs {
+  margin-top: 3rem;
+  text-align: center;
+  border-collapse: collapse;
+  font-weight: 900;
+  font-size: 0.85rem; }
+
+.tabs td {
+  padding: 0.4rem 0;
+  border: solid 1px #333333;
+  width: 16.67%; }
+
+.tabs td.selected {
+  background-color: #F6A623;
+  color: #FFF; }
+
+.tabs td:hover {
+  background-color: #F6A623;
+  color: #FFF;
+  transition: 0.2s ease-in;
+  cursor: pointer; }
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 4rem 0;
+  text-transform: lowercase; }
+
+.audio-player {
+  position: relative;
+  width: 40rem;
+  height: 15rem;
+  background-color: #333333;
+  margin: 0 auto;
+  box-shadow: 0 0 27px 2px rgba(0, 0, 0, 0.75); }
+
+.audio-player .media-object-section {
+  padding: 0; }
+
+.audio-player .thumbnail {
+  border: none; }
+
+.audio-player .thumbnail img {
+  height: 15rem; }
+
+.audio-player .track {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 25rem; }
+
+.audio-player .track .track-name {
+  font-family: "Roboto", sans-serif;
+  color: #FFF;
+  font-weight: 100;
+  font-size: 1.15rem; }
+
+.audio-player .track .artist-name {
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.9rem; }
+
+.audio-player .track .track-time {
+  font-family: "Roboto", sans-serif;
+  color: #FFF;
+  font-weight: 100;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.audio-player .track .track-time span:last-child {
+  padding-left: 1rem; }
+
+.audio-player .track .track-time span:first-child {
+  border-right: solid 2.5px #FFF;
+  padding-right: 0.5rem;
+  margin-left: -1rem; }
+
+.audio-player .hr-line {
+  margin-top: 2.6rem;
+  height: 1px;
+  background-color: #EFEFEF; }
+
+.audio-player .controls {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: -2.5rem; }
+
+.audio-player .previous-item-button {
+  position: relative;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: #F6A623;
+  top: -0.4rem;
+  width: 4rem;
+  height: 4rem;
+  padding-top: 0.55rem;
+  padding-right: 0.5rem;
+  font-size: 2rem;
+  color: #FFF; }
+
+.audio-player .previous-item-button:hover {
+  background-color: #FFF;
+  color: #F6A623;
+  transition: 0.2s ease-in;
+  cursor: pointer; }
+
+.audio-player .play-button {
+  position: relative;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: #F6A623;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 1rem;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-size: 3rem;
+  color: #FFF; }
+
+.audio-player .play-button:hover {
+  background-color: #FFF;
+  color: #F6A623;
+  transition: 0.2s ease-in;
+  cursor: pointer; }
+
+.audio-player .next-item-button {
+  position: relative;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: #F6A623;
+  top: -0.4rem;
+  width: 4rem;
+  height: 4rem;
+  padding-top: 0.55rem;
+  padding-left: 0.5rem;
+  font-size: 2rem;
+  color: #FFF; }
+
+.audio-player .next-item-button:hover {
+  background-color: #FFF;
+  color: #F6A623;
+  transition: 0.2s ease-in;
+  cursor: pointer; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  background-color: #333333;
+  font-size: 1.4rem; }
+
+.footer .footer-icon {
+  display: inline-block;
+  padding: 0 1rem;
+  border-right: 2px solid #FFF; }
+
+.footer .footer-icon:last-child {
+  border: none; }
+
+.footer .footer-icon a {
+  color: #FFF; }
+
+.footer .footer-icon a:hover {
+  color: #F6A623;
+  transition: color 0.2s ease-in; }
