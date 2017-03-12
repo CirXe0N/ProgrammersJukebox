@@ -14,7 +14,6 @@ export default class AudioPlayer extends Component {
 
         this.state = {
             player: null,
-            playlistURL: this.props.playlistURL,
             playlist: null,
             currentTrackPosition: -1,
             currentTrack: null,
@@ -23,20 +22,20 @@ export default class AudioPlayer extends Component {
             isLoading: true,
         };
 
-        this.initSoundCloudPlayer()
+        this.initSoundCloudPlayer(props.playlistURL);
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({playlistURL: nextProps.playlistURL, isLoading: true});
-        this.initSoundCloudPlayer();
+        this.setState({isLoading: true});
+        this.initSoundCloudPlayer(nextProps.playlistURL);
     }
 
-    initSoundCloudPlayer() {
+    initSoundCloudPlayer(playListURL) {
         soundcloud.initialize({
             client_id: SOUNDCLOUD_CLIENT_ID
         });
 
-        soundcloud.resolve(this.state.playlistURL)
+        soundcloud.resolve(playListURL)
             .then((playlist) => {
                 playlist.tracks = Utilities.randomizePlaylistTracks(playlist.tracks);
                 this.setState({playlist: playlist});
@@ -133,7 +132,7 @@ export default class AudioPlayer extends Component {
             return (
                 <div className="audio-player">
                     <div className="media-object">
-                        <div className="media-object-section">
+                        <div className="media-object-section show-for-medium">
                             <div className="thumbnail">
                                 <img src={thumbnail} alt=""/>
                             </div>
