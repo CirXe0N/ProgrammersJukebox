@@ -109,6 +109,7 @@ export default class AudioPlayer extends Component {
 
     render() {
         if(!this.state.isLoading) {
+            let imgNode = null;
             let thumbnail = require("../../images/track-placeholder.jpg");
             if (this.state.currentTrack && this.state.currentTrack.artwork_url) {
                 thumbnail = this.state.currentTrack.artwork_url;
@@ -134,7 +135,7 @@ export default class AudioPlayer extends Component {
                     <div className="media-object">
                         <div className="media-object-section show-for-medium">
                             <div className="thumbnail">
-                                <img src={thumbnail} alt=""/>
+                                <img ref={(image) => {imgNode = image}} src={thumbnail} alt="" onError={() => imgNode.src = require("../../images/track-placeholder.jpg")}/>
                             </div>
                         </div>
                         <div className="media-object-section">
