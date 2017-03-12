@@ -26,8 +26,14 @@ html, body {
   font-weight: 700;
   text-transform: uppercase; }
 
-.top-bar .creator span {
-  color: #F6A623; }
+.top-bar .creator a {
+  display: inline-block;
+  color: #F6A623;
+  padding: 0; }
+
+.top-bar .creator a:hover {
+  color: #FFF;
+  transition: color 0.2s ease-in; }
 
 .tabs {
   margin-top: 3rem;
@@ -165,7 +171,8 @@ html, body {
 .audio-player .play-button:hover {
   background-color: #FFF;
   color: #F6A623;
-  transition: background-color color 0.2s ease-in;
+  transition: 0.2s ease-in;
+  transition-property: background-color, color;
   cursor: pointer; }
 
 .audio-player .next-item-button {
@@ -211,3 +218,30 @@ html, body {
 .footer .footer-icon a:hover {
   color: #F6A623;
   transition: color 0.2s ease-in; }
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #F6A623;
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out; }
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px); }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg); }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg); } }
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }

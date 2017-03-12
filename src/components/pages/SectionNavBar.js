@@ -15,7 +15,7 @@ export default class SectionNavBar extends Component {
                     <div className="top-bar-right">
                         <ul className="menu">
                             <li className="creator">
-                                CREATED BY <span>CIRX SOFTWARE</span>
+                                CREATED BY <a href="http://www.cirx.io" target="_blank">CIRX SOFTWARE</a>
                             </li>
                         </ul>
                     </div>

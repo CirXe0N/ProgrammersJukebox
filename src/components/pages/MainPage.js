@@ -14,12 +14,16 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        selectedTab: 'HOUSE'
+        selectedTab: 'HOUSE',
+        selectedPlaylist: SOUNDCLOUD_PLAYLIST['HOUSE']
     };
   }
 
   handleTab(tabName) {
-    this.setState({selectedTab: tabName});
+    this.setState({
+        selectedTab: tabName,
+        selectedPlaylist: SOUNDCLOUD_PLAYLIST[tabName]
+    });
   }
 
   render() {
@@ -33,7 +37,7 @@ export default class App extends Component {
           <ContentPage tabName={this.state.selectedTab}/>
         </div>
         <div className="row columns">
-          <AudioPlayer playlistURL={SOUNDCLOUD_PLAYLIST[this.state.selectedTab]}/>
+          <AudioPlayer playlistURL={this.state.selectedPlaylist}/>
         </div>
         <SectionFooter/>
       </main>
