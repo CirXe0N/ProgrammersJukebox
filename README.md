@@ -14,7 +14,7 @@ This is a simple Soundcloud client that plays predefined playlists.
     $ npm install
     ```
 3. Go to the directory **src** and open the file **config.js**.
-4. Add your fill in your Soundcloud CLIENT ID and save the file.
+4. Fill in your Soundcloud CLIENT ID and save the file.
 
 ### Usage
 1. Run the following command to run the web server:
