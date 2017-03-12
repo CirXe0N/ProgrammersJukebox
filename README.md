@@ -10,6 +10,7 @@ This is a simple Soundcloud client that plays predefined playlists.
 ### Installation
 1. Open Terminal and change to the directory of the project.
 2. Install the project dependencies by entering the following command:
+
     ```
     $ npm install
     ```
