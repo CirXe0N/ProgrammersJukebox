@@ -9,7 +9,6 @@ import '../../../node_modules/font-awesome/css/font-awesome.css';
 import '../../stylesheets/main.css';
 import {SOUNDCLOUD_PLAYLIST} from "../../config";
 
-
 export default class App extends Component {
   constructor(props) {
     super(props);
